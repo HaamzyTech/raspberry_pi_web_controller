@@ -13,7 +13,7 @@ export async function getStatus(){
             status: data.status,
         };
     } catch(error){
-        console.log(error)
+        console.log((error as Error).message)
         return { 
             error: true, 
             message: "Error communicating with controll box",
